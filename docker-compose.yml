@@ -1,8 +1,8 @@
 version: "2"
 
 services:
-  ssl-proxy:
-    build: .
+  reverse-proxy:
+    build: reverse-proxy
     ports:
       - "443:443"
 

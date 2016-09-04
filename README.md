@@ -50,7 +50,8 @@ docker-compose run --rm acmesmith list
 
 ### Set up web server
 
-Change `nginx.conf` to fit your environment.
+Change `reverse-proxy/nginx.conf` to fit your environment.
+Other web servers such as Apache httpd may work as well.
 
 Now start the web server.
 
