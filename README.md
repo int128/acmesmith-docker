@@ -1,5 +1,6 @@
-# acmesmith-proxy
+# acmesmith-docker
 
+Dockerized HTTPS server using Let's Encrypt certificate continuously managed by [acmesmith](https://github.com/sorah/acmesmith).
 
 ## Prerequisite
 
