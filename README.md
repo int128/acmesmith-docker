@@ -62,7 +62,7 @@ COMMON_NAME=example.com ./renew.sh
 
 ### Continuously renew the certificate
 
-Run the script.
+The script is designed to be idempotent.
 If the certificate is being expired soon, the web server is restarted with an new certificate.
 Otherwise, the web server is not restarted.
 
@@ -70,8 +70,11 @@ Otherwise, the web server is not restarted.
 COMMON_NAME=example.com ./renew.sh
 ```
 
-The script is designed to be idempotent.
 Run the script periodically by the scheduler such as cron.
+
+```crontab
+0 1 * * 0   COMMON_NAME=example.com /opt/acmesmith-docker/renew.sh
+```
 
 ## Contribution
 
