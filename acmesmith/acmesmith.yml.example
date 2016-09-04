@@ -1,0 +1,19 @@
+endpoint: https://acme-v01.api.letsencrypt.org/
+
+storage:
+  type: s3
+  region: ap-northeast-1
+  bucket: YOUR_BUCKET
+  prefix: cert
+  aws_access_key:
+    access_key_id: IAM_KEY
+    secret_access_key: IAM_SECRET
+
+challenge_responders:
+  - route53:
+      aws_access_key:
+        access_key_id: IAM_KEY
+        secret_access_key: IAM_SECRET
+
+account_key_passphrase: YOUR_PASSPHRASE
+certificate_key_passphrase: YOUR_PASSPHRASE

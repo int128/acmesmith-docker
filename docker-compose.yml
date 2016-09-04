@@ -1,0 +1,11 @@
+version: "2"
+
+services:
+  ssl-proxy:
+    build: .
+    ports:
+      - "443:443"
+
+  acmesmith:
+    build: acmesmith
+
